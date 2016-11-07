@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_4</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form onsubmit="Valid()">
+            <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+            <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+            <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+            <button  name="valider" id="valider" type="submit">Valider</button>
+        </form>
+    <script>
+        function Valid() {
+            var nom = document.getElementById("nom").value;
+            var prenom = document.getElementById("prenom").value;
+            var ville = document.getElementById("ville").value;
+            if (nom == ""){
+                alert("Veuillez entrer un Nom !");
+                return false;
+            }else if (prenom == ""){
+                alert("Veuillez entrer un Prénom !");
+                return false;
+            }else if (ville == ""){
+                alert("Veuillez entrer une Ville !");
+                return false;
+            }
+            alert("Nom: "+nom+"\nPrenom: "+prenom+"\nVille: "+ville);
+        }
+    </script>
+    </body>
+</html>

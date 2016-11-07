@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_5</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form onsubmit="Calcul()">
+            <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+            <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+            <button  id="valider" name ="valider">Valider</button>
+        </form>
+    <script>
+        function Calcul() {
+            var premier_nombre = document.getElementById("premier_nombre").value;
+            var deuxieme_nombre = document.getElementById("deuxieme_nombre").value;
+            if (premier_nombre == ""){
+                alert("Veuillez entrer un Premier nombre !");
+                return false;
+            }else if (deuxieme_nombre == ""){
+                alert("Veuillez entrer un Deuxième nombre !");
+                return false;
+            }
+            premier_nombre = Math.trunc(premier_nombre);
+            var resultat = premier_nombre * deuxieme_nombre;
+            alert(resultat);
+        }
+    </script>
+    </body>
+</html>
